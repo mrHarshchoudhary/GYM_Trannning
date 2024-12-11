@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Portfolio</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="splits.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <!-- Header Section -->
+    <header>
+        <h1 class="name">Harsh choudhary</h1>
+        <p class="title">Professional Fitness Trainer</p>
+    </header>
+
+    <!-- Lift Summary Section -->
+    <section class="lift-summary">
+        <h2>Lift Summary</h2>
+        <div class="stats-container">
+            <div class="stat-block">
+                <h3>Current Weight</h3>
+                <p>185 lbs</p>
+            </div>
+            <div class="stat-block">
+                <h3>Max Bench</h3>
+                <p>275 lbs</p>
+            </div>
+            <div class="stat-block">
+                <h3>Max Squat</h3>
+                <p>365 lbs</p>
+            </div>
+            <div class="stat-block">
+                <h3>Max Deadlift</h3>
+                <p>405 lbs</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="achievements">
+        <h2>Professional Achievements</h2>
+        <div class="achievement-container">
+            <div class="achievement">
+                <h3>Achievement 1</h3>
+                <p>NASM Certified Personal Trainer</p>
+            </div>
+            <div class="achievement">
+                <h3>Achievement 2</h3>
+                <p>Competition Winner 2023</p>
+            </div>
+        </div>
+    </section>
+
+   
+    <section class="highlights">
+        <h2>Workout Splits</h2>
+        <div class="splits-container">
+            <div class="split-button" data-split="push">
+                <h3>Push Workout</h3>
+            </div>
+            <div class="split-content" id="push-content">
+                <ul>
+                    <li>Bench Press - 4x8</li>
+                    <li>Overhead Press - 3x10</li>
+                    <li>Incline Dumbbell Press - 3x12</li>
+                    <li>Lateral Raises - 3x15</li>
+                    <li>Tricep Pushdowns - 4x12</li>
+                </ul>
+            </div>
+
+            <div class="split-button" data-split="pull">
+                <h3>Pull Workout</h3>
+            </div>
+            <div class="split-content" id="pull-content">
+                <ul>
+                    <li>Deadlifts - 4x6</li>
+                    <li>Barbell Rows - 4x8</li>
+                    <li>Pull-ups - 3x10</li>
+                    <li>Face Pulls - 3x15</li>
+                    <li>Bicep Curls - 4x12</li>
+                </ul>
+            </div>
+
+            <div class="split-button" data-split="legs">
+                <h3>Leg Workout</h3>
+            </div>
+            <div class="split-content" id="legs-content">
+                <ul>
+                    <li>Squats - 4x8</li>
+                    <li>Romanian Deadlifts - 3x10</li>
+                    <li>Leg Press - 4x12</li>
+                    <li>Leg Extensions - 3x15</li>
+                    <li>Calf Raises - 4x20</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+ 
+    <section class="mentoring">
+        <h2>Mentoring</h2>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="goal">Fitness Goal:</label>
+                <textarea id="goal" name="goal" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Contact: harhchoudharyv@gmail.com</p>
+        <p>© 2024 Fitness Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="splits.js"></script>
+</body>
+</html>
