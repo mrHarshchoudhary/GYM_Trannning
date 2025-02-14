@@ -103,7 +103,7 @@
  
     <section class="mentoring">
         <h2>Mentoring</h2>
-        <form class="contact-form">
+        <form class="contact-form" id="mentorForm">
             <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -120,13 +120,61 @@
         </form>
     </section>
     
-
+<!-- Popup Modal -->
+<div id="popupModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <p>Mentor registered successfully!</p>
+    </div>
+</div>
     <footer>
-        <p>Contact: harhchoudharyv@gmail.com</p>
+        <p>Contact: harshchoudharyv@gmail.com</p>
         <p>© 2024 Fitness Portfolio. All rights reserved.</p>
     </footer>
 
+<script>
+  document.getElementById('mentorForm').addEventListener('submit', async function(event) {
+    event.preventDefault();
 
+    const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        goal: document.getElementById('goal').value
+    };
+
+    try {
+        const response = await fetch('http://localhost:5000/api/mentor', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        });
+
+        if (response.ok) {
+            // Show the popup modal
+            document.getElementById('popupModal').style.display = 'block';
+            document.getElementById('mentorForm').reset();
+        } else {
+            alert('Error registering mentor');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Error registering mentor');
+    }
+});
+
+document.querySelector('.close-btn').addEventListener('click', function() {
+    document.getElementById('popupModal').style.display = 'none';
+});
+
+window.addEventListener('click', function(event) {
+    const modal = document.getElementById('popupModal');
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+});
+</script>
     <script src="splits.js"></script>
 </body>
 </html>
